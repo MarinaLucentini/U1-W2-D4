@@ -134,14 +134,29 @@ console.log(upperFirst("ciao a tutti"));
   La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
-const cutString = function (stringToChange,firstIndex,lastIndex) {
-    let change = stringToChange.
+/*const cutString = function (stringToChange) {
+  let changeString = stringToChange.split("").splice(0, 1).splice(-1, 1).join();
+  return changeString;
 };
+console.log(cutString("Ciao a tutti"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 10
- Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
+ Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n 
+ numeri casuali inclusi tra 0 e 10.
 */
 
+const giveMeRandom = function (n) {
+  const randomArray = [];
+  let randomNumber = 0;
+  while (n <= 10) {
+    if (n <= 10) {
+      randomNumber = randomArray.push(randomNumber);
+    } else {
+    }
+  }
+  return randomArray;
+};
+console.log(giveMeRandom(9));
 /* SCRIVI QUI LA TUA RISPOSTA */
