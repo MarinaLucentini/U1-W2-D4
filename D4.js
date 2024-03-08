@@ -78,7 +78,7 @@ const epify = function (stringChange) {
 };
 console.log(epify("EPICODE è una grande scuola!"));
 console.log(epify("è una grande scuola!"));
-
+// startWith()
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 6
@@ -115,18 +115,20 @@ console.log(reverseString("EPICODE"));
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
-/*const upperFirst = function (stringToChange) {
-  let change = 0;
-  stringToChange.split();
-  for (let i = 0; i < stringToChange.length; i++) {
-    if (stringToChange[i] === " ") {
-      stringToChange[i++] = stringToChange[i].toUpperCase();
-    } else {
-    }
+const upperFirstPhrase = function (str) {
+  let words = str.split(" ");
+  let finalString = [];
+  for (let i = 0; i < words.length; i++) {
+    let firstChar = words[i].charAt(0);
+    let uppercaseChar = firstChar.toUpperCase();
+    let cutString = words[i].slice(1);
+    let finalWord = uppercaseChar + cutString;
+    finalString.push(finalWord);
   }
-  return change;
+  console.log(finalString.join(" "));
 };
-console.log(upperFirst("ciao a tutti"));
+
+upperFirstPhrase("hello world");
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 9
@@ -134,8 +136,8 @@ console.log(upperFirst("ciao a tutti"));
   La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
-/*const cutString = function (stringToChange) {
-  let changeString = stringToChange.split("").splice(0, 1).splice(-1, 1).join();
+const cutString = function (stringToChange) {
+  let changeString = stringToChange.slice(1, stringToChange.length - 1);
   return changeString;
 };
 console.log(cutString("Ciao a tutti"));
@@ -146,17 +148,12 @@ console.log(cutString("Ciao a tutti"));
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n 
  numeri casuali inclusi tra 0 e 10.
 */
-
 const giveMeRandom = function (n) {
-  const randomArray = [];
-  let randomNumber = 0;
-  while (n <= 10) {
-    if (n <= 10) {
-      randomNumber = randomArray.push(randomNumber);
-    } else {
-    }
+  const arr = [];
+  for (let i = 0; i < n; i++) {
+    arr.push(Math.floor(Math.random() * 10));
   }
-  return randomArray;
+  return arr;
 };
-console.log(giveMeRandom(9));
+console.log(giveMeRandom(5));
 /* SCRIVI QUI LA TUA RISPOSTA */
